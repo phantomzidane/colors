@@ -29,3 +29,7 @@
 html, body{
     overflow: hidden;
 }
+.level{
+    padding-bottom: 5%;
+    padding-top: 5%;
+}

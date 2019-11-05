@@ -61,21 +61,21 @@
        </div>
      </div>
      <div class="column is-6 test">
-      <div class="navbar">
+      <div class="navbar " [style.background-color]="colors?.c4">
         <div class="navbar-brand">
-          <a href="#" class="navbar-item">Test</a>
+          <a href="#" class="navbar-item" [style.color]="colors?.c2">Test</a>
         </div>
         <div class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item" href="#">Home</a>
-          <a class="navbar-item" href="#">About</a>
-          <a class="navbar-item" href="#">contact</a>
+        <div class="navbar-end" >
+          <a class="navbar-item" href="#" [style.color]="colors?.c2">Home</a>
+          <a class="navbar-item" href="#" [style.color]="colors?.c2">About</a>
+          <a class="navbar-item" href="#" [style.color]="colors?.c2">contact</a>
         </div>
        </div>
       </div>
       <br>
       <div class="section has-text-centered">
-            <h1 class="title is-1">Welcome to your testing <br>component</h1>
+            <h1 class="title is-1" [style.color]="colors?.c2">Welcome to your testing <br>component</h1>
             <h1 class="subtitle">Lorem ipsum dolor, sit amet consectetur <br>adipisicing elit. Rerum distinctio maiores quas atque sapiente </h1>
             <a href="#" class="button is-large">Button</a>
             <br><br><br>
@@ -84,7 +84,7 @@
       <div class="container">
         <div class="section has-text-centered">
           <h1 class="title">Why choose us?</h1><br>
-          <div class="level">
+          <div class="level" [style.background-color]="colors?.c3">
             <div class="level-item has-text-centered">
               <div>
                 <h1 class="title">Hello</h1>
@@ -130,12 +130,10 @@
         </div>
       </div>
      </div><br>
-     <footer class="footer">
+     <footer class="footer" [style.background-color]="colors?.c4">
         <div class="content has-text-centered">
-          <p>
-            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          <p [style.color]="colors?.c2">
+            My Footer Text Sample
           </p>
         </div>
       </footer>
