@@ -33,3 +33,28 @@ html, body{
     padding-bottom: 5%;
     padding-top: 5%;
 }
+.gencolors{
+   width: 80%;
+   height: 60%;
+   padding-left:20%;
+}
+.gensubcolors{
+    width: 100%;
+    height: 100%;
+ }
+.space{
+    width: 100%;
+    height: 100%;
+}
+.cl1{
+    background-color: #94aa2a;
+}
+.cl2{
+    background-color: #676959; 
+}
+.cl3{
+    background-color: #ac4492; 
+}
+.cl4{
+    background-color: #e8f0ac; 
+}
