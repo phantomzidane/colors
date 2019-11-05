@@ -24,8 +24,8 @@
     overflow-y: scroll;
 }
 .test{
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
-.body{
+html, body{
     overflow: hidden;
 }
