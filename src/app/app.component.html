@@ -20,10 +20,10 @@
                <div class="column is-3" *ngFor="let color of data">
                  <a (click)="change(color.id)">
                     <div class="item box">
-                    <div class="one fill" [style.background-color]="color?.c1" ></div>
-                    <div class="two fill" [style.background-color]="color?.c2"></div>
-                    <div class="three fill" [style.background-color]="color?.c3"></div>
-                    <div class="four fill" [style.background-color]="color?.c4"></div>
+                    <div class="one fill has-text-centered" [style.background-color]="color?.c1" > <span>{{color?.c1}}</span></div>
+                    <div class="two fill has-text-centered" [style.background-color]="color?.c2"><span>{{color?.c1}}</span></div>
+                    <div class="three fill has-text-centered" [style.background-color]="color?.c3"><span>{{color?.c1}}</span></div>
+                    <div class="four fill has-text-centered" [style.background-color]="color?.c4"><span>{{color?.c1}}</span></div>
                  </div>
                  </a>
                 
@@ -31,13 +31,19 @@
                
              </div>
            </div>
-           <div class="gencolors columns">
+           <div class="gencolors columns has-text-centered">
              <div class="cl1 space column">Text
-               
+                 <p><i class="fa fa-unlock-alt fa-3x"></i></p>
              </div>
-             <div class="cl2 space column">Forground</div>
-             <div class="cl3 space column">Background</div>
-             <div class="cl4 space column">Shade</div>
+             <div class="cl2 space column has-text-centered">Forground
+                <p><i class="fa fa-unlock-alt fa-3x"></i></p>
+             </div>
+             <div class="cl3 space column has-text-centered">Background
+                <p><i class="fa fa-unlock-alt fa-3x"></i></p>
+             </div>
+             <div class="cl4 space column has-text-centered">Shade
+                <p><i class="fa fa-unlock-alt fa-3x"></i></p>
+             </div>
            </div>
            <div class="section">
              <div class="columns">
@@ -56,7 +62,14 @@
              </div>
              
            </div>
-           
+           <footer class="footer">
+              <div class="content has-text-centered">
+                <p>
+                  <strong>Colors</strong> by <a href="https://jgthms.com">zidane</a>. The source code is licensed
+                  <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+                </p>
+              </div>
+            </footer>
          </div>
        </div>
      </div>
