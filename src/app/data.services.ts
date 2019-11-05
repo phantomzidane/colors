@@ -9,7 +9,7 @@ import {Data} from "../shared/data.interface"
 export class Colors{
     url="assets/colors.json";
     resulst:[];
-    constructor(private http: HttpClient, private data:Data){
+    constructor(private http: HttpClient){
     }
     getColors():Observable<Data[]>{
         return this.http.get<Data[]>(this.url);

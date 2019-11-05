@@ -16,16 +16,19 @@
            </div><br>
            <div class="container is-fluid has-text-centered">
               <h1 class="title">Choose your color parlette</h1>
-             <div class="columns section">
-               <div class="column is-3">
-                 <div class="item box">
-                    <div class="one fill"></div>
-                    <div class="two fill"></div>
-                    <div class="three fill"></div>
-                    <div class="four fill"></div>
+             <div class="columns section" >
+               <div class="column is-3" *ngFor="let color of data">
+                 <a (click)="change(color.id)">
+                    <div class="item box">
+                    <div class="one fill" [style.background-color]="color?.c1" ></div>
+                    <div class="two fill" [style.background-color]="color?.c2"></div>
+                    <div class="three fill" [style.background-color]="color?.c3"></div>
+                    <div class="four fill" [style.background-color]="color?.c4"></div>
                  </div>
+                 </a>
+                
                </div>
-               <div class="column is-3">
+               <!-- <div class="column is-3">
                 <div class="item box">
                   <div class="one fill"></div>
                   <div class="two fill"></div>
@@ -49,9 +52,8 @@
                   <div class="two fill"></div>
                   <div class="three fill"></div>
                   <div class="four fill"></div>
-                   
                </div>
-               </div>
+               </div> -->
                
              </div>
            </div>
