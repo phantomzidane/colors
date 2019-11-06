@@ -14,6 +14,7 @@ export class AppComponent {
   public state="color";
   public url="./assets"
   public file:File;
+  public cssfile:File;
   public page=`
   <head>
   <meta charset="utf-8">
@@ -118,6 +119,7 @@ export class AppComponent {
   }
   onFileUpload(event){
     this.file=event.target.files[0];
+    this.cssfile= event.target.files[1];
     console.log(this.file)
     console.log(event)
   }
@@ -130,10 +132,17 @@ export class AppComponent {
     // })
     let redfile= new FileReader();
     redfile.onload = (e) =>{
+      console.log(e.target.result.toString())
       this.page=e.target.result.toString()
       document.querySelector('#ok').innerHTML=this.page;
     }
     redfile.readAsText(this.file);
+    let readcss= new FileReader();
+    readcss.onload = (e) =>{
+      console.log(e.target.result.toString())
+    }
+    readcss.readAsText(this.cssfile);
+    
   }
 
 }
