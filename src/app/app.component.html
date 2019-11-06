@@ -1,4 +1,4 @@
-<div class="body">
+<!-- <div class="body">
    <div class="columns">
      <div class="column is-6 first">
        <div class="columns">
@@ -151,4 +151,15 @@
         </div>
       </footer>
    </div>
-</div> 
+</div>  -->
+
+<button class="button" (click)="col()">color</button>
+{{state}}
+<div (click)="test($event)" id="ok"></div>
+
+<br>
+<form>
+   <input type="file" name="data" id="" (change)="onFileUpload($event)">
+</form>
+<button class="button" (click)="readTextFile()">upload</button>
+
