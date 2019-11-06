@@ -159,7 +159,7 @@
 
 <br>
 <form enctype="multipart/form-data">
-   <input type="file" name="data" id="" (change)="onFileUpload($event)">
+   <input type="file" name="data" id="" multiple="true" (change)="onFileUpload($event)">
 </form>
 <button class="button" (click)="readTextFile()">upload</button>
 

@@ -5,7 +5,7 @@ import {Colors} from "./data.services";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css',]
 })
 export class AppComponent {
   title = 'color';
@@ -15,6 +15,7 @@ export class AppComponent {
   public url="./assets"
   public file:File;
   public cssfile:File;
+  public csss= ``;
   public page=`
   <head>
   <meta charset="utf-8">
@@ -130,18 +131,19 @@ export class AppComponent {
     // .subscribe(res=>{
     //   console.log(res)
     // })
-    let redfile= new FileReader();
-    redfile.onload = (e) =>{
-      console.log(e.target.result.toString())
-      this.page=e.target.result.toString()
-      document.querySelector('#ok').innerHTML=this.page;
-    }
-    redfile.readAsText(this.file);
     let readcss= new FileReader();
     readcss.onload = (e) =>{
-      console.log(e.target.result.toString())
+      this.csss=e.target.result.toString()
     }
     readcss.readAsText(this.cssfile);
+    
+    let redfile= new FileReader();
+    redfile.onload = (e) =>{
+      console.log(e.target.result)
+      this.page=e.target.result.toString()
+      document.querySelector('#ok').innerHTML=`<style>${this.csss}</style> ${this.page}`;
+    }
+    redfile.readAsText(this.file);
     
   }
 
