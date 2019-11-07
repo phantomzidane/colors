@@ -20,42 +20,42 @@ export class MainComponent implements OnInit {
    }
   }
   
-  // uploadFile(event){
-  //   this.htmlFile=event.target.files[0];
-  // }
-  // uplaodCss(event){
-  //  this.cssFile=event.target.files[0]
-  // }
-  // load(){
-  //   const readHtml= new FileReader();
-  //   readHtml.onload = e =>{
-  //     this.data.data["htmls"]=e.target.result
-  //     console.log(this.data.data["htmls"])
-  //     const readcss= new FileReader();
-  //     readcss.onload = e =>{
-  //         console.log(e)
-  //         this.data.data["css"]=e.target.result 
-  //     }
-  //     readcss.readAsText(this.cssFile);
+  uploadFile(event){
+    this.htmlFile=event.target.files[0];
+  }
+  uplaodCss(event){
+   this.cssFile=event.target.files[0]
+  }
+  load(){
+    const readHtml= new FileReader();
+    readHtml.onload = e =>{
+      this.data.data["htmls"]=e.target.result
+      console.log(this.data.data["htmls"])
+      const readcss= new FileReader();
+      readcss.onload = e =>{
+          console.log(e)
+          this.data.data["css"]=e.target.result 
+      }
+      readcss.readAsText(this.cssFile);
       
-  //   }
-  //   readHtml.readAsText(this.htmlFile);
+    }
+    readHtml.readAsText(this.htmlFile);
     
-  //   console.log(this.htmlFile)
+    console.log(this.htmlFile)
     
-  // }
-  // getcolor(event){
-  //   this.data.data["colors"]=event.target.style.backgroundColor
-  // }
-  // choose(){
-  //   if(this.state=="color"){
-  //     this.state="backgroundColor";
-  //     this.data.data["state"]= this.state;
-  //   }
-  //   else if(this.state=="backgroundColor"){
-  //     this.state="color";
-  //     this.data.data["state"]= this.state;
-  //   }
+  }
+  getcolor(event){
+    this.data.data["colors"]=event.target.style.backgroundColor
+  }
+  choose(){
+    if(this.state=="color"){
+      this.state="backgroundColor";
+      this.data.data["state"]= this.state;
+    }
+    else if(this.state=="backgroundColor"){
+      this.state="color";
+      this.data.data["state"]= this.state;
+    }
     
-  // }
+  }
 }
