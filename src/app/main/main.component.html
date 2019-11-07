@@ -18,10 +18,10 @@
 
 <!-- sample colors -->
    
-    <div class="columns section"> 
+    <div class="columns section" (click)="getcolor($event)"> 
              
                 <div class="space column is-3">
-                    <div class="colr has-text-centered" style="background-color:rgb(54, 201, 201) ;">
+                    <div  class="colr has-text-centered" style="background-color:rgb(54, 201, 201) ;">
                         <a href="#"><i class="fa fa-lock fa-2x" aria-hidden="true"></i></a>
                         <h1>#ff4343</h1><br>
                     </div>
@@ -54,6 +54,7 @@
 
     <div class="section">
         <button class="button is-rounded gen">Generate</button>
+        <button class="button" (click)="choose()">{{state}}</button>
         <div class="colors">
             <div class="color" style="background-color: rebeccapurple;"></div>
             <div class="color" style="background-color: firebrick;"></div>
@@ -90,7 +91,7 @@
            <form >
                 <div class="file">
                     <label class="file-label">
-                      <input  class="file-input" type="file" name="resume">
+                      <input  class="file-input" type="file" name="resume" (change)="uploadFile($event)">
                       <span class="file-cta">
                         <span class="file-icon">
                           <i class="fas fa-upload"></i>
@@ -105,7 +106,7 @@
            <form enctype="multipart/form-data" class="form">
             <div class="file">
                 <label class="file-label">
-                  <input multiple="true" class="file-input" type="file" name="resume">
+                  <input multiple="true" class="file-input" type="file" name="resume" (change)="uplaodCss($event)">
                   <span class="file-cta">
                     <span class="file-icon">
                       <i class="fas fa-upload"></i>
@@ -117,7 +118,9 @@
                 </label>
               </div>
        </form>
-               
+        
+       <button class="button" (click)="load()">Load</button>
+            
    
     </div>
     <footer class="footer my-footer">
