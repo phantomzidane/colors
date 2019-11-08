@@ -10,6 +10,7 @@
     transition: padding-top 0.5s;
     position: relative;
     overflow: hidden;
+    cursor: copy;
 }
 .colr:hover{
     filter: brightness(110%);

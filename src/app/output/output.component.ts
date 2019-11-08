@@ -8,6 +8,8 @@ import { DataService } from '../data.service';
 export class OutputComponent implements OnInit {
   private csss:string;
   private coloors;
+  public realPage=``;
+  public file:File;
   public page = `
   <p>testing</p>
   `
@@ -23,6 +25,7 @@ export class OutputComponent implements OnInit {
     document.querySelector("#output").innerHTML=`<style>${this.csss} </style> ${this.page}`;
 
   }
+  
   action(event){
     this.coloors=this.data.data["colors"]
     if(event.target=="<span>"){
@@ -40,5 +43,18 @@ export class OutputComponent implements OnInit {
     }
     
   }
-
+  daata(){
+   this.realPage= document.querySelector("#output").innerHTML;
+  this.file = new File([this.realPage], "indeex.html", {
+    type: "text/plain",
+  });
+   
+  }
+  donw(event){
+    
+     console.log(this.file)
+      event.target.href = this.file
+      event.target.download = "index.html";
+    
+  }
 }
