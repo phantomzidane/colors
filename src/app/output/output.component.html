@@ -1,6 +1,8 @@
-<div id="output" (click)="action($event)"></div>
+<div id="output" (click)="action($event)" (mouseover)="hover($event)" (mouseout)="out($event)"></div>
 <button (click)="load()">load</button>
 <button (click)="daata()">data</button>
-
+<div>
+    <p *ngFor="let pro of cls">{{cls.cssText}}</p>
+</div>
 
 <a (click)="donw($event)">tess</a>

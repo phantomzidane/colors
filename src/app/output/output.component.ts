@@ -7,6 +7,7 @@ import { DataService } from '../data.service';
 })
 export class OutputComponent implements OnInit {
   private csss:string;
+  public cls:{}
   private coloors;
   public realPage=``;
   public file:File;
@@ -35,13 +36,29 @@ export class OutputComponent implements OnInit {
       console.log(event.target)
       if(this.data.data["state"]=="color"){
         event.target.style.color=this.coloors;
+        console.log(event.target.style)
+        this.cls={}
+        this.cls=event.target.style
+        console.log(event.target.style.length)
       }
       else if(this.data.data["state"]=="backgroundColor"){
         event.target.style.backgroundColor=this.coloors;
+        this.cls={}
+        this.cls=event.target.style
+       
+        console.log(event.target.style)
       }
      
     }
     
+  }
+  hover(event){
+    console.log(event)
+    event.target.style.border="2px solid green"
+  }
+  out(event){
+    console.log(event)
+    event.target.style.border="none"
   }
   daata(){
    this.realPage= document.querySelector("#output").innerHTML;
